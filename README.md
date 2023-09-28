@@ -26,7 +26,8 @@ Each modification to this project undergoes a meticulous verification process an
 
 ## Commented Code
 
-Each modification to this project undergoes a meticulous verification process and subsequent signing. This stringent approach guarantees the authenticity and integrity of our codebase. In case you encounter any modifications that lack appropriate verification, we strongly advise against cloning or utilizing them, as they might harbor malicious code.
+Our codebase is meticulously documented with comprehensive comments, aimed at providing a clear understanding of the functionality of individual components.
+
 
 ## Getting Started
 
@@ -38,7 +39,7 @@ To explore and interact with the Aave Flash Loan Contract and its advanced featu
 
 ### Install Dependencies
 
-2. Ensure you have Node.js and npm installed in your environment.
+2. Ensure you have `node.js` and `npm` installed in your environment.
 
 3. Install the necessary dependencies by running the following command in your terminal:
 
@@ -48,9 +49,40 @@ To explore and interact with the Aave Flash Loan Contract and its advanced featu
 
 ## Smart Contract Deployment
 
-This section will provide detailed instructions and scripts for deploying the FlashLoan contract on various testnets, including Layer 2 solutions. (Please refer to the specific documentation provided in this repository for deployment details.)
+**We will be deploying the FlashLoan smart contract on Polygon Mumbai testnet**
 
-***Will be updated soon***
+To deploy the `SimpleFlashLoanPt2.sol` contract, follow these steps:
+
+1. Set your deployment environment by forking the network you want to use for the Hardhat node. We recommend using your own RPC URL for better reliability. You can create your own Web3 API keys on the Infura website: [Infura](https://www.infura.io/)
+
+   You can also use a public RPC URL. Visit the Chainlist website for any public URL on the network you want to use: [Chainlist](https://chainlist.org/)
+
+2. If you use your own RPC URL, create a `.env` file and add the following:
+
+   ```
+   YOUR_API_KEY= " Paste your key here "
+   YOUR_PRIVATE_KEY= " Paste your Account/Wallet private key here "
+   ```
+
+3. Command to fork Polygon Mumbai chain for your Hardhat node, using your own RPC URL:
+
+   ```bash
+   npx hardhat node --fork https://polygon-mumbai.infura.io/v3/{YOUR_API_KEY}
+   ```
+
+   Command to fork Polygon Mumbai chain for your Hardhat node, using a public RPC URL:
+
+   ```bash
+   npx hardhat node --fork https://polygon-mumbai-bor.publicnode.com
+   ```
+   
+   Get faucets MATIC for the gas fees:
+   - MATIC faucets: [Mumbai Faucet](https://mumbaifaucet.com/)
+
+   Get faucets USDC for the FlashLoan:
+   - USDC faucets: [Aave Faucet](https://staging.aave.com/faucet/)
+
+**Update:** More detailed deployment instructions will be provided soon.
 
 ## Contributions
 
